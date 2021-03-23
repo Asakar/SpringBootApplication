@@ -12,19 +12,19 @@
             <h1>Create a new student</h1>
         </section>
         <section class="middle-container">
-            <form action="#" method="${/save}" th:object="${student}" class="form">
+            <form action="#" th:action="@{/save}" method="post" th:object="${student}" class="form">
                 <div class="form">
                     <label for="name">Enter name: </label>
                     <input type="hidden" th:field="*{id}">
-                    <input type="text" name="name" id="name" th:field="name" required placeholder="name">
+                    <input type="text" name="name" id="name" th:field="*{name}" required placeholder="name">
                 </div>
                 <div class="form">
                     <label for="password">Enter password: </label>
-                    <input type="password" name="password" id="password" th:field="password"
-                           required placeholder="password">
+                    <input type="password" name="password" id="password" th:field="*{password}"
+                                   required placeholder="password">
                 </div>
                 <div class="form">
-                    <input type="submit" value="add">
+                    <button type="submit">Save</button>
                 </div>
             </form>
         </section>

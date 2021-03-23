@@ -18,8 +18,8 @@ public class StudentController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<Student> studentList = studentService.getStudentList();
-        model.addAttribute("students", studentList);
+        List<Student> students = studentService.getStudentList();
+        model.addAttribute("students", students);
         return "index";
     }
 

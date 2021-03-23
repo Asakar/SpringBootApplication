@@ -10,7 +10,7 @@
     <main>
         <section class="top-container">
             <h1>All Student</h1>
-            <h3> <a th:href="${/new}" >Create new student</a></h3>
+            <h3> <a th:href="@{'/new'}" >Create new student</a></h3>
         </section>
         <section class="middle-container">
             <table>
@@ -19,12 +19,12 @@
                     <th>Name</th>
                 </tr>
                 <tbody>
-                <tr th:each="student :${studentList}">
-                    <td th:text="${student.id}">ID</td>
-                    <td th:text="${student.name}">name</td>
-                    <td><a th:href="@{'/edit/' + ${student.id}}">Edit</a></td>
-                    <td><a th:href="@{'/delete/' + ${student.id}}">Delete</a></td>
-                </tr>
+                    <tr th:each="student : ${students}">
+                        <td th:text="${student.id}">ID</td>
+                        <td th:text="${student.name}">name</td>
+                        <td><a th:href="@{'/edit/' + ${student.id}}">Edit</a></td>
+                        <td><a th:href="@{'/delete/' + ${student.id}}">Delete</a></td>
+                    </tr>
                 </tbody>
             </table>
         </section>
