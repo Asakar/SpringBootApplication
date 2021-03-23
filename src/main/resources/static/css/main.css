@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Asap:wght@400;500;700&display=swap');
+
+* {
+    box-sizing: border-box;
+    font-family: Asap, sans-serif;
+    text-align: center;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+  color: black;
+  border: 2px solid #536162;
+}
+
+a:hover {
+  background-color: #ffcda3;
+}
+
+body {
+  background-color: #fbe6c2;
+}
+
+.students-table {
+  margin:30px auto;
+  border-spacing: 0 10px;
+}
+
+.top-container {
+  margin:20:px auto;
+}
+
+
