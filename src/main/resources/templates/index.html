@@ -5,15 +5,16 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Students</title>
+    <link rel="stylesheet" th:href="@{/css/main.css}">
 </head>
 <body>
     <main>
         <section class="top-container">
-            <h1>All Student</h1>
-            <h3> <a th:href="@{'/new'}" >Create new student</a></h3>
+            <h1>All Students</h1>
+            <h3 id="create-student"><a th:href="@{'/createstudent'}" >Create new student</a></h3>
         </section>
         <section class="middle-container">
-            <table>
+            <table class="students-table">
                 <tr>
                     <th>ID</th>
                     <th>Name</th>

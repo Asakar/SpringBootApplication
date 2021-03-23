@@ -23,7 +23,7 @@ public class StudentController {
         return "index";
     }
 
-    @GetMapping("/new")
+    @GetMapping("/createstudent")
     public String add(Model model) {
         model.addAttribute("student", new Student());
         return "new";
@@ -37,7 +37,7 @@ public class StudentController {
 
     @RequestMapping("/edit/{id}")
     public ModelAndView showEditStudentPage(@PathVariable(name = "id") int id) {
-        ModelAndView mav = new ModelAndView("new");
+        ModelAndView mav = new ModelAndView("createstudent");
         Student std = studentService.getById(id);
         mav.addObject("student", std);
         return mav;
